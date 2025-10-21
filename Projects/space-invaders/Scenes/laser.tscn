@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgs3r61bl2haa"]
+
+[ext_resource type="Script" uid="uid://s2aftmm65w4v" path="res://Scripts/Laser.gd" id="1_mou6w"]
+[ext_resource type="Texture2D" uid="uid://goao4k8jpgmi" path="res://Sprites/Space_Invaders_Laser.png" id="2_3pc01"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c8ure"]
+size = Vector2(2, 5)
+
+[node name="Laser" type="Area2D"]
+script = ExtResource("1_mou6w")
+laserSpeed = 200.0
+
+[node name="LaserHitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_c8ure")
+
+[node name="LaserSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_3pc01")
+
+[node name="isVisible" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="isVisible" to="." method="_on_is_visible_screen_exited"]
