@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://3kf3aknkehge"]
+
+[ext_resource type="Script" uid="uid://iswha7if7l4h" path="res://Scripts/Enemy.gd" id="1_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://da7i7xeximrw0" path="res://Sprites/Space_Invaders_Enemy.png" id="2_afpow"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_287tu"]
+size = Vector2(12, 8)
+
+[node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
+script = ExtResource("1_1f0kj")
+health = 1
+
+[node name="EnemyHitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_287tu")
+
+[node name="EnemySprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_afpow")

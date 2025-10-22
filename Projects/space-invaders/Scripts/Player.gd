@@ -2,11 +2,9 @@ extends CharacterBody2D
 
 @export var playerSpeed : float
 @export var playerAcceleration : float
-
 @export var laserCooldown : float = 1
 
 var LASER = preload("res://Scenes/laser.tscn")
-
 var canShoot : bool = true
 
 func _physics_process(delta):
@@ -25,13 +23,16 @@ func _physics_process(delta):
 		_shoot()
 
 func _shoot() -> void:
-	if canShoot:
-		canShoot = false
+	
+	#Check if there is currently a bullet on the screen
+	var currentBullet = get_tree().get_first_node_in_group("Laser")
+	
+	#If there is no bullet, shoot!
+	if not currentBullet:
 		
 		var laser = LASER.instantiate()
 		laser.position = position
 		add_sibling(laser)
-		await get_tree().create_timer(laserCooldown).timeout
-		canShoot = true
+
 		
 	
