@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckxhoi73bp5md"]
+
+[ext_resource type="Script" uid="uid://db2cq60quvr0m" path="res://Scripts/enemy_generator.gd" id="1_ov16c"]
+
+[node name="EnemyGenerator" type="Node2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_ov16c")

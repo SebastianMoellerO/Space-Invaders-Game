@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-class_name Enemy
-
 @export var health : int
 
 func _hit():

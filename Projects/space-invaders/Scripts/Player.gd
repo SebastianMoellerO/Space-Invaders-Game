@@ -32,6 +32,7 @@ func _shoot() -> void:
 		
 		var laser = LASER.instantiate()
 		laser.position = position
+		laser.scale = scale
 		add_sibling(laser)
 
 		

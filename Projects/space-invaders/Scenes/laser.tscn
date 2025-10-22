@@ -8,7 +8,7 @@ size = Vector2(2, 5)
 
 [node name="Laser" type="Area2D" groups=["Laser"]]
 script = ExtResource("1_mou6w")
-laserSpeed = 200.0
+laserSpeed = 300.0
 
 [node name="LaserHitbox" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.5)

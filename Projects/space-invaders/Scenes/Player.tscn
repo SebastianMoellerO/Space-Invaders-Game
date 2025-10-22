@@ -8,7 +8,6 @@ radius = 8.0
 height = 16.0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
-position = Vector2(132, 92)
 script = ExtResource("1_kyqiw")
 playerSpeed = 150.0
 playerAcceleration = 20.0
